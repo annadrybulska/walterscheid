@@ -1,0 +1,38 @@
+{% extends 'webapp/header.html' %}
+	{% load staticfiles %}
+{% block content %}
+<!--<div class="container-fluid">
+<div class="row">
+<div class="col-md-3">
+{%  for c in content %}
+<p>{{c}}</p>
+{% endfor %}
+</div>
+<div class="col-md-9"> -->
+<div style="-webkit-filter: grayscale(100%);
+filter: grayscale(100%);">
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4864.67342672144!2d16.788845!3d52.436815!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x87cd416ec846347d!2sWalterscheid-Service-Master.+Bresi%C5%84ski+R.!5e0!3m2!1sen!2spl!4v1457650364414" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+<div class="formularz">
+		<a class="logo" href="/">
+			<img src="{% static 'webapp/img/walterscheid_logo.png' %}" alt="Waltercheid">
+		</a>
+		<form>
+			<label for="imie">Imię</label>
+			<input type="text" id="imie" placeholder="Podaj swoje imię" autofocus>
+			<label for="mail">E-mail</label>
+			<input type="email"id="mail" placeholder="Wpisz e-mail zwrotny">
+			<label for="tresc">Treść</label>
+			<textarea id="tresc"rows="6" cols="50" placeholder="Co chcesz nam powiedzieć?"></textarea>
+			<button>Wyślij wiadomość</button>
+		</form>
+
+	</div>
+
+
+<!--</div>
+
+
+</div>
+</div>-->
+{% endblock %}

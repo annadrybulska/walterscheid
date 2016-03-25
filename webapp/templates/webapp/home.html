@@ -1,0 +1,69 @@
+{% extends 'webapp/header.html' %}
+{% load staticfiles %}
+{% block content %}
+<!--
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">-->
+  <!-- Indicators -->
+  <!-- 
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+ -->
+  <!-- Wrapper for slides -->
+  <!-- 
+  <div class="carousel-inner">
+    <div class="item active">
+      <img class="carousel" src="{% static 'webapp/img/1.jpg' %}" alt="...">
+      <div class="carousel-caption">
+          <h3></h3>
+      </div>
+    </div>
+    <div class="item">
+      <img class="carousel" src="{% static 'webapp/img/2.jpg' %}" alt="...">
+      <div class="carousel-caption">
+          <h3></h3>
+      </div>
+    </div>
+    <div class="item">
+      <img class="carousel" src="{% static 'webapp/img/3.jpg' %}" alt="...">
+      <div class="carousel-caption">
+          <h3></h3>
+      </div>
+    </div>
+  </div>
+   -->
+  <!-- Controls -->
+  <!-- 
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>
+ -->
+<!-- Carousel -->
+<script type="text/javascript">
+  $(window).load(function() {           
+  var i =0; 
+  var images = ['{% static 'webapp/img/3.jpg' %}','{% static 'webapp/img/2.jpg' %}','{% static 'webapp/img/1.jpg' %}'];
+  var image = $('#slideit');
+                //Initial Background image setup
+  image.css('background-image', 'url({% static 'webapp/img/1.jpg' %})');
+                //Change image at regular intervals
+  setInterval(function(){   
+   image.fadeOut(1000, function () {
+   image.css('background-image', 'url(' + images [i++] +')');
+   image.fadeIn(1000);
+   });
+   if(i == images.length)
+    i = 0;
+  }, 5000);            
+ });
+</script>
+<div id="slideit" style="width:100%;height:500px">  
+</div>
+{% include 'webapp/includes/htmlsnippet.html' %}
+{% endblock %}

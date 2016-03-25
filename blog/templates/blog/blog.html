@@ -1,0 +1,33 @@
+{% extends "webapp/header.html" %}
+
+{% block content %}
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-md-6">
+			<div class="thumbnail">
+				<img src="" alt="">
+				<div class="caption">
+					<h3>Tytuł</h3>
+					<p>opis</p>
+					<p><a href="" class="btn btn-default" role="button">Zobacz</a></p>
+				</div>
+			</div>							
+		</div>
+		<div class="col-xs-12 col-md-6">
+			<div class="thumbnail">
+				<img src="" alt="">
+				<div class="caption">
+					<h3>Tytuł</h3>
+					<p>opis</p>
+					<p><a href="" class="btn btn-default" role="button">Zobacz</a></p>
+				</div>
+			</div>							
+		</div>	
+	</div>
+</div>
+
+{% for post in object_list %}
+<h5>{{ post.date|date:"Y-m-d" }}<a href="/program/{{post.id}}"> {{post.title}}</a></h5>
+{% endfor %}
+
+{% endblock %}
