@@ -8,21 +8,24 @@
 }
 
 /* form */
-.formularz {
+
+@media only screen and (min-width: 768px) {
+	.kontakt {
 	box-sizing: border-box;
-	padding: 30px 15px 30px;
-	max-width: 300px;
-	height: 420px;
+	padding: 1.875em 1.875em 1.875em 1.875em;
+	max-width: 18.750em;
+	height: 19.125em;
+	/* 420px */
 	margin: auto;
   	position: fixed;
-  	top: 0; left: 56.250em; bottom: 0; right: 0;
-	border-radius: 2px;
+  	top: 0; left: 70%; bottom: 0; right: 0;
+	border-radius: 0.125em;
 	background: rgba(255, 255, 255, 0.7);
-	box-shadow: 0 0 8px rgba(0,0,0,0.1);
+	box-shadow: 0 0 0.500em rgba(0,0,0,0.1);
 	z-index: 1;
+	text-align: left;
 }
-	@media only screen and (min-width: 768px) {
-	.formularz {
+	.kontakt {
 	animation-name:szerokosc;
     animation-duration:5s;
     animation-iteration-count: 1;
@@ -31,24 +34,27 @@
     -webkit-animation-iteration-count: 1;
 }}
 @keyframes szerokosc
-      {
-        0% { transform:translate(400px, 0px); }
-        100% { transform:translate(0px, 0px); }
+    {
+    0% { transform:translate(25.000em, 0em); }
+    100% { transform:translate(0em, 0em); }
+    }
+
+@-webkit-keyframes szerokosc
+    {
+    0% { transform:translate(25.000em, 0em); }
+    100% { transform:translate(0em, 0em); }
       }
 
-      @-webkit-keyframes szerokosc
-      {
-        0% { transform:translate(400px, 0px); }
-        100% { transform:translate(0px, 0px); }
-      }
 .logo {
 	display: block;
-	text-align: center;
-	margin-bottom: 20px;
+	text-align: left;
+	margin-bottom: 1.250em;
 }
 .logo img {
 	max-width: 60%;
 }
+
+/* form inner
 form label {
 	border: 0; 
 	clip: rect(0 0 0 0); 
@@ -87,7 +93,7 @@ form button:hover, form button:focus {
 form input:hover, form textarea:hover, form input:focus, form textarea:focus, a:focus {
 	outline: #3D4351 solid 1px;
 }
-
+*/
 /* navbar */
 
 .navbar-brand>img {
@@ -101,8 +107,8 @@ body {
 
 .navbar-fixed-top {
  	background: #ffffff; /* #5f6975;*/
- 	box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
- 	padding: 0 40px;
+ 	box-shadow: 0em 0em 0.063em 0.063em rgba(0, 0, 0, 0.1);
+ 	padding: 0 2.500em;
 }
 
 .navbar-default .navbar-nav>li>a:hover {
@@ -114,8 +120,8 @@ body {
 }
 
 .navbar-fixed-bottom {
-	padding: 0 40px;
-	box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+	padding: 0 2.500em;
+	box-shadow: 0em 0em 0.063em 0.063em rgba(0, 0, 0, 0.1);
 	background-color: #3D4351;
 	color: white;
 }
@@ -124,18 +130,19 @@ body {
 #slideit {
 	position: absolute; 
   	z-index: 0;
-  	top: 1em; 
+  	top: 1em;
+  	background-repeat: no-repeat;
 }
 
 /* info home page */
 .well {
 	position: fixed;
 	z-index: 1;
-	border-radius: 2px;
+	border-radius: 0.125em;
 	background: rgba(255, 255, 255, 0.7);
-	box-shadow: 0 0 8px rgba(0,0,0,0.1); 
+	box-shadow: 0 0 0.500em rgba(0,0,0,0.1); 
 	top: 5em; left: 0; bottom: 0; right: 0;
-	border-radius: 2px;
+	border-radius: 0.125em;
 	height: 10em;
 }
 
@@ -143,7 +150,7 @@ body {
 .btn-default:hover, .btn-default:focus {
 	background: #3D4351;
 	color: #eee;
-	outline: #3D4351 solid 1px;
+	outline: #3D4351 solid 0.063em;
 }
 
 .btn-default {
@@ -153,12 +160,62 @@ body {
 	box-sizing: border-box;
 	clear: both;
 	width: 100%;
-	padding: 12px;
-	margin: 5px 0 5px;
-	border: 1px solid #eee;
-	border-radius: 2px;
+	padding: 0.750em;
+	margin: 0.313em 0 0.313em;
+	border: 0.063em solid #eee;
+	border-radius: 0.125em;
 	color: #aaa;
 	text-align: center;
 	font-family: 'Raleway', sans-serif !important;
 	font-size: 0.9em;
+}
+
+a:link {
+	color: #FFD600;
+	text-decoration: none;
+}
+
+a:hover, a:active, a:visited {
+	text-decoration: none;
+	color: #3D4351;
+}
+
+/* thumbnail */
+.thumbnail {
+	border-radius: 0.125em;
+	background: rgba(255, 255, 255, 0.7);
+	box-shadow: 0 0 0.500em rgba(0,0,0,0.1);
+	z-index: 1;
+}
+
+@media only screen and (max-width: 40em) {
+.well {
+	height: 20.500em;
+	}
+}
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em){
+.well {
+	height: 13em;
+	}
+}
+
+/* dane kontaktowe */
+.dane {
+	box-sizing: border-box;
+	padding: 1.875em 2.500em 1.875em 2.500em;
+	max-width: 100%;
+	height: 22em;
+	margin: auto;
+	border-radius: 0.125em;
+	background: rgba(255, 255, 255, 0.7);
+	box-shadow: 0 0 0.500em rgba(0,0,0,0.1);
+	text-align: left;
+}
+
+.dane > .logo {
+	display: block;
+	text-align: left;
+	margin-bottom: 1.250em;
+	max-width: 40%;
 }
